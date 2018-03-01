@@ -7,12 +7,12 @@
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/templates/menu.css" rel="stylesheet">
-    <link href="css/templates/navTabs.css.css" rel="stylesheet">
 
-    <link href="open-iconic/font/css/open-iconic-bootstrap.css"
-          rel="stylesheet">
+
+    <link href="open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">
     <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+
 </head>
 
 
@@ -59,21 +59,50 @@
     <div class="row mt-3">
         <div class="col-sm">
 
-
-            <ul class="nav nav-tabs" role="tablist">
+            <ul class="nav nav-tabs active" role="tablist">
                 <li class="nav-item">
                     <a class="nav-link active" href="#">Liste des tâches</a>
                 </li>
+
                 <li class="nav-item">
                     <a class="nav-link" href="#">Calendrier</a>
                 </li>
-
             </ul>
 
+
+            <div class="row mt-3">
+                <div class="col-sm">
+
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Recherche"
+                               aria-label="Recherche">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Recherche</button>
+                    </form>
+                </div>
+
+                <div class="col-sm">
+
+                    <div class="dropdown float-right">
+                        <button class="btn  dropdown-toggle" type="button" id="boutonTri"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Trier par : Date
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="boutonTri">
+                            <a class="dropdown-item" href="#">Priorité</a>
+                            <a class="dropdown-item" href="#">Date d'ajout</a>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
         </div>
-
-
     </div>
+
+
 </div>
 
 </body>
