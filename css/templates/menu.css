@@ -1,6 +1,11 @@
 @charset "ISO-8859-1";
 
-
+.ligne_verticale
+{
+    width:1px;
+    border-left:1px solid gray;
+    height:100;
+}
 .logoit {
 	width: 3em;
 	height: 3em;
@@ -21,8 +26,6 @@
 
 }
 #noti_Counter {
-
-
     position: relative;
     background: #E1141E;
     color: #FFF;
