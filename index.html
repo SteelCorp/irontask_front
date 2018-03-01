@@ -2,62 +2,132 @@
 <html lang="fr">
 
 <head>
-<meta charset="UTF-8">
-<title>IronTask</title>
+    <meta charset="UTF-8">
+    <title>IronTask</title>
 
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="css/templates/menu.css" rel="stylesheet">
-<link href="open-iconic/font/css/open-iconic-bootstrap.css"
-	rel="stylesheet">
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/templates/menu.css" rel="stylesheet">
+
+
+    <link href="open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+
 </head>
 
 
 <body>
-	<nav
-		class="navbar navbar-dark bg-primary navbar-expand-md bg-faded justify-content-center">
-		<img class="logoit" alt="logo" src="img/logo.png"> <a href="/"
-			class="navbar-brand d-flex mr-auto">IronTask</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse"
-			data-target="#collapsingNavbar3">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="navbar-collapse collapse w-100" id="collapsingNavbar3">
-			<ul class="navbar-nav mx-auto w-100 justify-content-center">
-				<li class="nav-item dropdown px-3"><a
-					class="nav-link dropdown-toggle" href="#"
-					id="navbarDropdownMenuLink" data-toggle="dropdown"
-					aria-haspopup="true" aria-expanded="false"> Triathlon </a>
-					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-						<a class="dropdown-item" href="#">Triathlon du 01.01.2017</a>
-						<a class="dropdown-item" href="#">Triathlon du 02.02.2018</a>
-						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="#">Ajouter un Triathlon</a>
-					</div></li>
-				<li class="nav-item active px-3 "><a class="nav-link" href="#">Tâches
-						<span class="sr-only">(current)</span>
-				</a></li>
-				<li class="nav-item px-3"><a class="nav-link" href="#">Personnels</a></li>
-				<li class="nav-item px-3"><a class="nav-link" href="#">Stocks</a></li>
-			</ul>
-			<ul class="navbar-nav ml-auto w-100 justify-content-end">
+<nav
+        class="navbar navbar-dark bg-primary navbar-expand-md bg-faded justify-content-center">
+    <img class="logoit" alt="logo" src="img/logo.png"> <a href="/"
+                                                          class="navbar-brand d-flex mr-auto">IronTask</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#collapsingNavbar3">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">
+        <ul class="navbar-nav mx-auto w-100 justify-content-center">
+            <li class="nav-item dropdown px-3"><a
+                    class="nav-link dropdown-toggle" href="#"
+                    id="navbarDropdownMenuLink" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false"> Triathlon </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#">Triathlon du 01.01.2017</a>
+                    <a class="dropdown-item" href="#">Triathlon du 02.02.2018</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Ajouter un Triathlon</a>
+                </div>
+            </li>
+            <li class="nav-item active px-3 "><a class="nav-link" href="#">Tâches
+                <span class="sr-only">(current)</span>
+            </a></li>
+            <li class="nav-item px-3"><a class="nav-link" href="#">Personnels</a></li>
+            <li class="nav-item px-3"><a class="nav-link" href="#">Stocks</a></li>
+        </ul>
+        <ul class="navbar-nav ml-auto w-100 justify-content-end">
 
-				<li class="nav-item px-1 "><a class="nav-link" href="#"> <img
-						class="messagerie" alt="messagerie" src="img/mail.png">
-				</a></li>
-				<li class="nav-item dropdown px-1"><a
-					class="nav-link dropdown-toggle" href="#"
-					id="navbarDropdownMenuLink" data-toggle="dropdown"
-					aria-haspopup="true" aria-expanded="false"><img class="compte" alt="messagerie" src="img/admin.png"> Nom Prénom </a>
-					<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-						<a class="dropdown-item" href="#">Triathlon du 01.01.2017</a>
-						<a class="dropdown-item" href="#">Triathlon du 02.02.2018</a>
-						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="#">Se déconnecter <img class="iconeadmin" alt="messagerie" src="img/logout.png"></a>
-					</div></li>
-				</ul>
-		</div>
-	</nav>
+            <li class="nav-item px-1 "><a class="nav-link" href="#"> <img
+                    class="messagerie" alt="messagerie" src="img/mail.png">
+            </a></li>
+            <li class="nav-item dropdown px-1"><a
+                    class="nav-link dropdown-toggle" href="#"
+                    id="navbarDropdownMenuLink" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false"><img class="compte" alt="messagerie" src="img/admin.png">
+                Nom Prénom </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#">Triathlon du 01.01.2017</a>
+                    <a class="dropdown-item" href="#">Triathlon du 02.02.2018</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Se déconnecter <img class="iconeadmin" alt="messagerie"
+                                                                          src="img/logout.png"></a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+<div class="container ">
+
+    <div class="row mt-3 ">
+
+        <div class="col-sm mb3   ">
+
+            <ul class="nav nav-tabs active" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Liste des tâches</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Calendrier</a>
+                </li>
+            </ul>
+
+
+            <div class="row mt-3 mb-1">
+                <div class="col-sm">
+
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Recherche"
+                               aria-label="Recherche">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Recherche</button>
+                    </form>
+                </div>
+
+                <div class="col-sm">
+
+                    <div class="dropdown float-right">
+                        <button class="btn  dropdown-toggle" type="button" id="boutonTri"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Trier par : Date
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="boutonTri">
+                            <a class="dropdown-item" href="#">Priorité</a>
+                            <a class="dropdown-item" href="#">Date d'ajout</a>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+    <!-- Taches -->
+    <div class="col-sm mb3 border  ">
+
+
+    </div>
+    <!-- Fin Taches -->
+
+</div>
+
+
 </body>
 </html>
