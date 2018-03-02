@@ -11,7 +11,8 @@
     <script src="js/bootstrap.bundle.js"></script>
 </head>
 <body>
-<nav class="navbar navbar-dark bg-primary navbar-expand-md bg-faded justify-content-center">
+
+<header class="navbar navbar-dark bg-primary navbar-expand-md bg-faded justify-content-center">
     <img class="logoit" alt="logo" src="img/logo.png"> <a href="/"
                                                           class="navbar-brand d-flex mr-auto">IronTask</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -56,15 +57,11 @@
             </li>
         </ul>
     </div>
-</nav>
-
+</header>
 
 <div class="container ">
-
     <div class="row mt-3 ">
-
         <div class="col-sm mb3   ">
-
             <ul class="nav nav-tabs active" role="tablist">
                 <li class="nav-item">
                     <a class="nav-link active" href="#">Liste des tâches</a>
@@ -108,21 +105,91 @@
 
 
     <!-- Taches -->
-    <div class="card">
+    <div class="card" href="">
         <div class="card-header">
+					<span class="badge badge-pill badge-warning">Moyenne</span>
             Nom de la tache !
-            <div class="float-right">
-                Créer par : Hadrien
-            </div>
+            <div class="float-right"> Créer par : Hadrien </div>
         </div>
 
         <div class="card-body">
-            <h5 class="card-title">Special title treatment</h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+						<div class="float-right">
+							<a><img class="iconeadmin" alt="messagerie" src="img/alerte.png">18/09/2018</a>
+						</div>
+					 	<h5 class="card-title">Special title treatment</h5>
+						<div class="float-right">
+							<a><img class="iconeadmin" alt="messagerie" src="img/clock.png">18/09/2018</a>
+						</div>
+						<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+					   <a href="#" class="btn btn-primary">Modifier</a>
+
         </div>
     </div>
+
+		<div class="card" href="">
+				<div class="card-header">
+					<span class="badge badge-pill badge-danger">Importante</span>
+						Nom de la tache !
+						<div class="float-right"> Créer par : Hadrien </div>
+				</div>
+
+				<div class="card-body">
+						<div class="float-right">
+							<a><img class="iconeadmin" alt="messagerie" src="img/alerte.png">18/09/2018</a>
+						</div>
+						<h5 class="card-title">Special title treatment</h5>
+						<div class="float-right">
+							<a><img class="iconeadmin" alt="messagerie" src="img/clock.png">18/09/2018</a>
+						</div>
+						<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+						 <a href="#" class="btn btn-primary">Modifier</a>
+
+				</div>
+		</div>
+		<div class="card" href="">
+				<div class="card-header">
+					<span class="badge badge-pill badge-warning">Moyenne</span>
+						Nom de la tache !
+						<div class="float-right"> Créer par : Hadrien </div>
+				</div>
+
+				<div class="card-body">
+						<div class="float-right">
+							<a><img class="iconeadmin" alt="messagerie" src="img/alerte.png">18/09/2018</a>
+						</div>
+						<h5 class="card-title">Special title treatment</h5>
+						<div class="float-right">
+							<a><img class="iconeadmin" alt="messagerie" src="img/clock.png">18/09/2018</a>
+						</div>
+						<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+						 <a href="#" class="btn btn-primary">Modifier</a>
+
+				</div>
+		</div>
+		<div class="card" href="">
+				<div class="card-header">
+					<span class="badge badge-pill badge-warning">Moyenne</span>
+						Nom de la tache !
+						<div class="float-right"> Créer par : Hadrien </div>
+				</div>
+
+				<div class="card-body">
+						<div class="float-right">
+							<a><img class="iconeadmin" alt="messagerie" src="img/alerte.png">18/09/2018</a>
+						</div>
+						<h5 class="card-title">Special title treatment</h5>
+						<div class="float-right">
+							<a><img class="iconeadmin" alt="messagerie" src="img/clock.png">18/09/2018</a>
+						</div>
+						<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+						 <a href="#" class="btn btn-primary">Modifier</a>
+
+				</div>
+		</div>
     <!-- Fin Taches -->
+
+
+<span class="plus"><div class="plus"></div></span>
 
 <!-- Pagination -->
     <div class="container">
@@ -152,7 +219,9 @@
     </div>
 </div>
     <!-- Fin pagination -->
-
+<!--bouton ajout-->
+	<button type="button"class="btn btn-primary ajouter">+</button >
+<!--fin bouton ajout-->
 
 </div>
 
