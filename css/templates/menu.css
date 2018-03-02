@@ -3,8 +3,8 @@
 .ligne_verticale
 {
     width:1px;
-    border-left:1px solid gray;
-    height:100;
+    border-left:1px solid white;
+
 }
 .ajouter{
 	position: fixed;
