@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <title>IronTask</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-datepicker.standalone.min.css" rel="stylesheet">
     <link href="css/templates/menu.css" rel="stylesheet">
+    <link href="css/datepicker.css" rel="stylesheet" >
     <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/datepicker.js"></script>
     <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/popper.min.js"></script>
 </head>
 <body>
 
@@ -68,23 +69,27 @@
     </div>
 </header>
 
+
+<div class="entête">
+    <div class="container ">
+        <ul class="nav nav-tabs align-content-center" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" href="#">Liste des tâches</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#">Calendrier</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
 <div class="container ">
     <div class="row mt-3 ">
-        <div class="col-sm mb3   ">
-            <ul class="nav nav-tabs active" role="tablist">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#">Liste des tâches</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Calendrier</a>
-                </li>
-            </ul>
-
-
+        <div class="col   ">
             <div class="row mt-3 mb-1">
-                <div class="col-sm">
-
+                <div class="col">
                     <form class="form-inline my-2 my-lg-0">
                         <input class="form-control mr-sm-2" type="search" placeholder="Recherche"
                                aria-label="Recherche">
@@ -196,19 +201,6 @@
         </div>
     </div>
 </div>
-<div class="container">
-    <div class="input-group date">
-        <input type="text" class="form-control" id="datepicker" placeholder="mm/DD/YYYY">
-    </div>
-</div>
-<script>
-
- $('#datepicker').datepicker({
-     dateFormat: 'dd-mm-yy',
-            uiLibrary: 'bootstrap4'
-        });
-
-</script>
 
 <!-- Fin Taches -->
 
@@ -262,42 +254,75 @@
                 <form>
                     <div class="container-fluid">
                         <div class="row form-group">
-                            <label for="recipient-name" class="form-control-label">Nom tâche:</label>
+                            <label for="recipient-name" class="form-control-label">Nom tâche :</label>
                             <input type="text" class="form-control" id="recipient-name">
                         </div>
                         <div class="row form-group">
-                            <label for="message-text" class="form-control-label">Description:</label>
+                            <label for="message-text" class="form-control-label">Description :</label>
                             <textarea class="form-control" id="message-text"></textarea>
                         </div>
-                        <div class="row">
-                            <label for="message-text" class="form-control-label">Niveau priorité:</label>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-3">Haut</div>
-                            <div class="col-md-3">Moyen</div>
-                            <div class="col-md-3">Faible</div>
-                            <div class="col-md-3">Aucun</div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4">
 
+                        <div class="row ">
+                            <div class ="input-group mb-1">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text"><img class="iconeadmin" alt="messagerie" src="img/datestart.png">Date début </label>
+                                </div>
+                                <input type="text" class="form-control" data-toggle="datepicker">
                             </div>
-                            <div class="col-md-4">Moyen</div>
-                            <div class="col-md-4">Faible</div>
                         </div>
+                        <div class="row ">
+                            <div class ="input-group mb-1">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text"><img class="iconeadmin" alt="messagerie" src="img/dateend.png">Date fin   </label>
+                                </div>
+                                <input type="text" class="form-control" data-toggle="datepicker">
+                            </div>
+                        </div>
+                        <div class="row espaceModale">
+                            <div class ="input-group mb-1">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text"><img class="iconeadmin" alt="messagerie" src="img/alerte.png">Date rappel</label>
+                                </div>
+                                <input type="text" class="form-control" data-toggle="datepicker">
+                            </div>
+                        </div>
+
                         <div class="row">
-                            <label for="message-text" class="form-control-label">Responsable:</label>
+                            <label for="message-text" class="form-control-label">Niveau priorité :</label>
+                        </div>
+                        <div class="row espaceModale ">
+
+                            <div class="col-sm-3">
+                                <div class="radio">
+                                    <label><input type="radio" name="optradio"> Haut</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="radio">
+                                    <label><input type="radio" name="optradio"> Moyen</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="radio">
+                                    <label><input type="radio" name="optradio"> Faible</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="radio">
+                                    <label><input type="radio" name="optradio"> Aucun</label>
+                                </div>
+                            </div>
                         </div>
                         <div class="row">
                             <div class ="input-group mb-1">
                                 <select class="custom-select" id="inputGroupSelect02">
                                     <option selected>Choix...</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
+                                    <option value="1">Thierry Beltran</option>
+                                    <option value="2">Nono Gégé</option>
+                                    <option value="3">Arthur Biture</option>
                                 </select>
                                 <div class="input-group-append">
-                                    <label class="input-group-text" for="inputGroupSelect02"> </label>
+                                    <label class="input-group-text" for="inputGroupSelect02">Responsable</label>
                                 </div>
                             </div>
                         </div>
@@ -313,6 +338,16 @@
 </div>
 <!--fin bouton ajout-->
 
+<!-- scrip pour les selecteurs de date-->
+<script>
+    $(function() {
+        $('[data-toggle="datepicker"]').datepicker({
+            format: 'dd/mm/yyyy',
+            autoHide: true,
+            zIndex: 2048,
+        });
+    });
+</script>
 
 
 
