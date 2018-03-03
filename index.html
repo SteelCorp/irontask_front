@@ -69,23 +69,27 @@
     </div>
 </header>
 
+
+<div class="entête">
+    <div class="container ">
+        <ul class="nav nav-tabs align-content-center" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" href="#">Liste des tâches</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#">Calendrier</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
 <div class="container ">
     <div class="row mt-3 ">
-        <div class="col-sm mb3   ">
-            <ul class="nav nav-tabs active" role="tablist">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#">Liste des tâches</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Calendrier</a>
-                </li>
-            </ul>
-
-
+        <div class="col   ">
             <div class="row mt-3 mb-1">
-                <div class="col-sm">
-
+                <div class="col">
                     <form class="form-inline my-2 my-lg-0">
                         <input class="form-control mr-sm-2" type="search" placeholder="Recherche"
                                aria-label="Recherche">
@@ -257,53 +261,56 @@
                             <label for="message-text" class="form-control-label">Description :</label>
                             <textarea class="form-control" id="message-text"></textarea>
                         </div>
+
+                        <div class="row ">
+                            <div class ="input-group mb-1">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text"><img class="iconeadmin" alt="messagerie" src="img/datestart.png">Date début </label>
+                                </div>
+                                <input type="text" class="form-control" data-toggle="datepicker">
+                            </div>
+                        </div>
+                        <div class="row ">
+                            <div class ="input-group mb-1">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text"><img class="iconeadmin" alt="messagerie" src="img/dateend.png">Date fin   </label>
+                                </div>
+                                <input type="text" class="form-control" data-toggle="datepicker">
+                            </div>
+                        </div>
+                        <div class="row espaceModale">
+                            <div class ="input-group mb-1">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text"><img class="iconeadmin" alt="messagerie" src="img/alerte.png">Date rappel</label>
+                                </div>
+                                <input type="text" class="form-control" data-toggle="datepicker">
+                            </div>
+                        </div>
+
                         <div class="row">
                             <label for="message-text" class="form-control-label">Niveau priorité :</label>
                         </div>
                         <div class="row espaceModale ">
 
-                            <div class="col-md-3">
+                            <div class="col-sm-3">
                                 <div class="radio">
                                     <label><input type="radio" name="optradio"> Haut</label>
                                 </div>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-sm-3">
                                 <div class="radio">
                                     <label><input type="radio" name="optradio"> Moyen</label>
                                 </div>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-sm-3">
                                 <div class="radio">
                                     <label><input type="radio" name="optradio"> Faible</label>
                                 </div>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-sm-3">
                                 <div class="radio">
                                     <label><input type="radio" name="optradio"> Aucun</label>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <label for="message-text" class="form-control-label">Date début :</label>
-                            </div>
-                            <div class="col-md-4">
-                                <label for="message-text" class="form-control-label">Date fin :</label>
-                            </div>
-                            <div class="col-md-4">
-                                <label for="message-text" class="form-control-label">Date rappel :</label>
-                            </div>
-
-                        </div>
-                        <div class="row espaceModale">
-                            <div class="col-md-4">
-                                <input type="text" class="form-control" data-toggle="datepicker">
-                            </div>
-                            <div class="col-md-4">
-                                <input type="text" class="form-control" data-toggle="datepicker">
-                            </div>
-                            <div class="col-md-4">
-                                <input type="text" class="form-control" data-toggle="datepicker">
                             </div>
                         </div>
                         <div class="row">
@@ -335,6 +342,7 @@
 <script>
     $(function() {
         $('[data-toggle="datepicker"]').datepicker({
+            format: 'dd/mm/yyyy',
             autoHide: true,
             zIndex: 2048,
         });
