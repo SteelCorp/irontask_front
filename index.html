@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <title>IronTask</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-datepicker.standalone.min.css" rel="stylesheet">
     <link href="css/templates/menu.css" rel="stylesheet">
+    <link href="css/datepicker.css" rel="stylesheet" >
     <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/datepicker.js"></script>
     <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/popper.min.js"></script>
 </head>
 <body>
 
@@ -196,19 +197,6 @@
         </div>
     </div>
 </div>
-<div class="container">
-    <div class="input-group date">
-        <input type="text" class="form-control" id="datepicker" placeholder="mm/DD/YYYY">
-    </div>
-</div>
-<script>
-
- $('#datepicker').datepicker({
-     dateFormat: 'dd-mm-yy',
-            uiLibrary: 'bootstrap4'
-        });
-
-</script>
 
 <!-- Fin Taches -->
 
@@ -262,42 +250,72 @@
                 <form>
                     <div class="container-fluid">
                         <div class="row form-group">
-                            <label for="recipient-name" class="form-control-label">Nom tâche:</label>
+                            <label for="recipient-name" class="form-control-label">Nom tâche :</label>
                             <input type="text" class="form-control" id="recipient-name">
                         </div>
                         <div class="row form-group">
-                            <label for="message-text" class="form-control-label">Description:</label>
+                            <label for="message-text" class="form-control-label">Description :</label>
                             <textarea class="form-control" id="message-text"></textarea>
                         </div>
                         <div class="row">
-                            <label for="message-text" class="form-control-label">Niveau priorité:</label>
+                            <label for="message-text" class="form-control-label">Niveau priorité :</label>
                         </div>
-                        <div class="row">
-                            <div class="col-md-3">Haut</div>
-                            <div class="col-md-3">Moyen</div>
-                            <div class="col-md-3">Faible</div>
-                            <div class="col-md-3">Aucun</div>
+                        <div class="row espaceModale ">
+
+                            <div class="col-md-3">
+                                <div class="radio">
+                                    <label><input type="radio" name="optradio"> Haut</label>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="radio">
+                                    <label><input type="radio" name="optradio"> Moyen</label>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="radio">
+                                    <label><input type="radio" name="optradio"> Faible</label>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="radio">
+                                    <label><input type="radio" name="optradio"> Aucun</label>
+                                </div>
+                            </div>
                         </div>
                         <div class="row">
                             <div class="col-md-4">
-
+                                <label for="message-text" class="form-control-label">Date début :</label>
                             </div>
-                            <div class="col-md-4">Moyen</div>
-                            <div class="col-md-4">Faible</div>
+                            <div class="col-md-4">
+                                <label for="message-text" class="form-control-label">Date fin :</label>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="message-text" class="form-control-label">Date rappel :</label>
+                            </div>
+
                         </div>
-                        <div class="row">
-                            <label for="message-text" class="form-control-label">Responsable:</label>
+                        <div class="row espaceModale">
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" data-toggle="datepicker">
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" data-toggle="datepicker">
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" data-toggle="datepicker">
+                            </div>
                         </div>
                         <div class="row">
                             <div class ="input-group mb-1">
                                 <select class="custom-select" id="inputGroupSelect02">
                                     <option selected>Choix...</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
+                                    <option value="1">Thierry Beltran</option>
+                                    <option value="2">Nono Gégé</option>
+                                    <option value="3">Arthur Biture</option>
                                 </select>
                                 <div class="input-group-append">
-                                    <label class="input-group-text" for="inputGroupSelect02"> </label>
+                                    <label class="input-group-text" for="inputGroupSelect02">Responsable</label>
                                 </div>
                             </div>
                         </div>
@@ -313,6 +331,15 @@
 </div>
 <!--fin bouton ajout-->
 
+<!-- scrip pour les selecteurs de date-->
+<script>
+    $(function() {
+        $('[data-toggle="datepicker"]').datepicker({
+            autoHide: true,
+            zIndex: 2048,
+        });
+    });
+</script>
 
 
 
